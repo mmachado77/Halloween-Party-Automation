@@ -5,7 +5,7 @@ import time
 
 # Conecta com o Bluetooth
 def connect():
-    ser = serial.Serial('COM8', 9600, timeout=1)  
+    ser = serial.Serial('COM8', 9600, timeout=1)   # Edite a Porta na qual seu Bluetooth está pareado
     print("Conectado à porta serial.")
     listen(ser=ser) #Chama o loop de comunicação
 

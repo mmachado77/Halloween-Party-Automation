@@ -23,7 +23,7 @@ void loop() {
         Serial.println("1");     // Para monitoramento no Serial Monitor via USB
         digitalWrite(relayOne, LOW);  // Ativa o Relé 1
         digitalWrite(relayTwo, LOW);  // Ativa o Relé 2
-        delay(30000);  // Delay maior para evitar sobrecarga no módulo Bluetooth
+        delay(30000);  // Ajuste este delay para o tempo que durar sua automação.
     } else {
         Bluetooth.println("0");  // Envia "0" via Bluetooth
         Serial.println("0");     // Para monitoramento no Serial Monitor via USB
