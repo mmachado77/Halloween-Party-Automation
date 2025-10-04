@@ -1,40 +1,85 @@
-# Halloween Party Automation 🎃👻
+# Halloween Party Automation 🎃👻  
 
-Este é um projeto de automação que criei para dar um toque assustador à minha festa de Halloween! 
+Bring your Halloween party to life — or to *undeath*!  
+This project adds a spooky interactive touch to any Halloween setup through motion detection, Bluetooth communication, and synchronized sound and light effects.
 
-## O que faz:
-- Detecta quando os convidados entram na festa;
-- Envia um comando para o computador via Bluetooth;
-- Ativa dois relés que acionam dispositivos assustadores;
-- Toca um áudio assustador (.wav) no computador para um jumpscare.
+---
 
-## Como usei:
-- Customizei uma caixa de som Bluetooth, disfarçando-a de fantasma;
-- Conectei uma máquina de fumaça a um dos relés;
-- Conectei um estrobo ao outro relé;
-- Liguei a caixa de som e um Arduino ao meu computador;
-- Posicionei um sensor na entrada da festa para detectar os convidados. A cada nova chegada, a caixa de som toca uma risada assustadora, a máquina de fumaça, escondida sob o fantasma, é ativada, e o estrobo ilumina a "criatura fantasmagórica". 🎶💨💀
+## 🧠 What It Does  
+- Detects when guests enter the party area.  
+- Sends a Bluetooth signal to a computer.  
+- Activates two relays connected to scary devices.  
+- Plays a spooky `.wav` sound on the computer for an instant jumpscare.  
 
-## Do que você vai precisar:
-- 1 Placa Arduino;
-- 2 Relés;
-- 1 Módulo Bluetooth;
-- 1 Computador;
-- 1 Caixa de som conectada ao computador (via cabo ou Bluetooth).
+---
 
-## Como instalar:
-1. Carregue o código `ProjetoPlaca/Sensor/sensor.ino` no Arduino;
-2. Conecte os módulos aos pinos corretos da sua placa, conforme indicado nos comentários do código;
-3. Emparelhe o módulo Bluetooth com o seu computador;
-   > **Nota:** O módulo Bluetooth é apenas *slave*, então ele só ficará conectado enquanto o programa estiver rodando;
-4. Edite o caminho do seu arquivo de áudio e a porta de comunicação 'COM' no arquivo `halloweenProject.py`;
-5. Instale o pacote `simpleaudio` no seu terminal:  
+## ⚙️ How I Used It  
+- I disguised a Bluetooth speaker as a ghost.  
+- One relay controls a **fog machine**.  
+- The other relay controls a **strobe light**.  
+- The speaker and Arduino are connected to the computer.  
+- A PIR motion sensor at the entrance triggers everything:  
+
+When someone walks in, the ghost laughs maniacally, the fog machine bursts into action, and the strobe flashes, revealing the “haunting creature.” 🎶💨💀  
+
+---
+
+## 🔧 Hardware Required  
+- 1 × Arduino board  
+- 2 × Relay modules  
+- 1 × Bluetooth module (e.g., HC-06)  
+- 1 × Computer  
+- 1 × Speaker connected to the computer (via cable or Bluetooth)  
+
+---
+
+## 💻 Installation  
+
+1. Upload the Arduino sketch from:  
+   ```bash
+   ProjetoPlaca/Sensor/sensor.ino
+   ```  
+
+2. Connect the modules to the appropriate Arduino pins (see comments in the code).  
+
+3. Pair the Bluetooth module with your computer.  
+   > **Note:** The Bluetooth module operates as a *slave device*, so it remains connected only while the program is running.  
+
+4. Edit `halloweenProject.py` to update:  
+   - The **audio file path** (your spooky sound).  
+   - The **COM port** for your Bluetooth module.  
+
+5. Install the required dependency:  
    ```bash
    pip install simpleaudio
-   ```
-6. Execute o programa:  
-   ```bash
-   py halloweenProject.py
-   ```
+   ```  
 
-Agora é só se preparar para ver os convidados se assustarem com seu fantasma animado! 🎃👻
+6. Run the project:  
+   ```bash
+   python halloweenProject.py
+   ```  
+
+---
+
+## 👀 Demo Idea  
+Place the “ghost speaker” near the entrance.  
+When motion is detected — the ghost laughs, smoke rises, and lights flicker.  
+Perfect for Halloween parties or haunted house setups!  
+
+---
+
+## 🧩 Technologies Used  
+- **Arduino (C++)** — for hardware control.  
+- **Python 3** — for PC-side automation and sound playback.  
+- **Bluetooth (HC-06)** — for wireless communication between Arduino and PC.  
+
+---
+
+## 🕸️ Author  
+**Matheus Machado** — [GitHub @mmachado77](https://github.com/mmachado77)  
+Halloween enthusiast and automation tinkerer 👨‍💻🎃  
+
+---
+
+> *“It’s alive... ALIVE!” — Dr. Frankenstein (and probably me testing the relays at 2 AM.)*
+> 
